@@ -115,13 +115,6 @@ img {
   text-transform: uppercase;
 }
 
-.wordmark-mark {
-  width: 3rem;
-  height: 3rem;
-  flex: none;
-  object-fit: cover;
-  mix-blend-mode: screen;
-}
 
 .site-nav {
   display: flex;
@@ -638,11 +631,7 @@ img {
     font-size: 0.8rem;
   }
 
-  .wordmark-mark {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
+  
   .nav-toggle {
     position: relative;
     z-index: 2;
@@ -806,8 +795,16 @@ img {
   }
 }
 
-@media (max-width: 380px) {
-  .wordmark > span:last-child {
-    display: none;
-  }
+
+/* Approved EJR quill motif, presented as a standalone page element. */
+.brand-emblem {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 0 1.5rem;
+  object-fit: contain;
+}
+
+.page-heading .brand-emblem {
+  margin-bottom: 2rem;
 }
