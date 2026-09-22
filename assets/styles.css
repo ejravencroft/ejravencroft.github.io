@@ -420,7 +420,7 @@ img {
 }
 
 .page-heading {
-  padding-top: clamp(10rem, 17vw, 15rem);
+  padding-top: 9rem;
   padding-bottom: clamp(4rem, 7vw, 7rem);
   border-bottom: 1px solid var(--line);
 }
@@ -796,63 +796,15 @@ img {
 }
 
 
-/* The approved ornament has a true transparent cutout and no frame. */
+/* Approved EJR quill motif, presented as a standalone page element. */
 .brand-emblem {
   display: block;
-  width: 330px;
-  height: auto;
+  width: 150px;
+  height: 150px;
+  margin: 0 0 1.5rem;
   object-fit: contain;
-  mix-blend-mode: screen;
-}
-
-.hero-content {
-  position: relative;
-}
-
-.hero-content .brand-emblem {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.page-heading {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 330px;
-  column-gap: 2rem;
-  align-items: start;
 }
 
 .page-heading .brand-emblem {
-  grid-column: 2;
-  grid-row: 1 / span 3;
-  justify-self: center;
-}
-
-.page-heading > .eyebrow,
-.page-heading > h1,
-.page-heading > .page-deck {
-  grid-column: 1;
-}
-
-.page-heading h1 {
-  font-size: clamp(4.5rem, 8vw, 8rem);
-}
-
-.page-heading .page-deck {
-  margin-left: 0;
-}
-
-@media (max-width: 760px) {
-  .hero-content .brand-emblem {
-    position: static;
-  }
-
-  .brand-emblem {
-    width: min(72vw, 280px);
-    margin-bottom: 1.5rem;
-  }
-
-  .page-heading {
-    display: block;
-  }
+  margin-bottom: 2rem;
 }
