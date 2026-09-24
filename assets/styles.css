@@ -585,6 +585,60 @@ img {
   text-transform: uppercase;
 }
 
+.author-portrait-frame {
+  width: min(100%, 28rem);
+  overflow: hidden;
+  border: 1px solid rgba(208, 185, 141, 0.38);
+  background: #111113;
+  box-shadow: 1.5rem 1.5rem 0 rgba(86, 30, 36, 0.12);
+}
+
+.author-portrait {
+  width: 100%;
+  height: auto;
+}
+
+.author-credo {
+  position: relative;
+  grid-column: 1 / -1;
+  width: min(100%, 58rem);
+  margin: clamp(1rem, 3vw, 3rem) auto 0;
+  padding: clamp(2.5rem, 5vw, 4rem);
+  border: 1px solid rgba(208, 185, 141, 0.38);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(86, 30, 36, 0.42), transparent 62%),
+    #111113;
+  box-shadow: 1.5rem 1.5rem 0 rgba(86, 30, 36, 0.12);
+}
+
+.author-credo::before {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: var(--brass-bright);
+  content: "“";
+  font-family: var(--serif);
+  font-size: 5rem;
+  line-height: 0.55;
+}
+
+.author-credo blockquote {
+  margin: 0;
+  color: var(--paper);
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.author-credo figcaption {
+  margin-top: 2rem;
+  color: var(--brass-bright);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 .prose a {
   color: var(--brass-bright);
 }
@@ -832,6 +886,8 @@ img {
   }
 
   .placeholder-cover,
+  .author-portrait-frame,
+  .author-credo,
   .portrait-placeholder {
     width: min(100%, 21rem);
     margin-inline: auto;
