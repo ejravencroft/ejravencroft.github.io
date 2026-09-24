@@ -454,6 +454,42 @@ img {
   padding-block: clamp(5rem, 10vw, 10rem);
 }
 
+.book-list {
+  border-bottom: 1px solid var(--line);
+}
+
+.book-entry {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.72fr) 1.28fr;
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: start;
+  padding-block: clamp(5rem, 10vw, 10rem);
+}
+
+.book-entry + .book-entry {
+  border-top: 1px solid var(--line);
+}
+
+.book-entry-reverse .book-cover-frame {
+  order: 2;
+}
+
+.book-entry-reverse .book-copy {
+  order: 1;
+}
+
+.book-cover-frame {
+  width: min(100%, 26rem);
+  background: #121113;
+  box-shadow: 1.5rem 1.5rem 0 rgba(86, 30, 36, 0.16);
+}
+
+.book-cover {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(208, 185, 141, 0.42);
+}
+
 .placeholder-cover {
   display: grid;
   aspect-ratio: 2 / 3;
@@ -501,6 +537,16 @@ img {
 .book-copy h2,
 .prose h2 {
   margin-bottom: 2rem;
+}
+
+.book-copy p {
+  margin-block: 0 1.25rem;
+}
+
+.book-copy .book-lead {
+  color: var(--paper);
+  font-size: 1.3rem;
+  font-style: italic;
 }
 
 .placeholder-note {
@@ -769,9 +815,20 @@ img {
   }
 
   .books-grid,
+  .book-entry,
   .about-layout {
     grid-template-columns: 1fr;
     gap: 4rem;
+  }
+
+  .book-entry-reverse .book-cover-frame,
+  .book-entry-reverse .book-copy {
+    order: initial;
+  }
+
+  .book-cover-frame {
+    width: min(100%, 21rem);
+    margin-inline: auto;
   }
 
   .placeholder-cover,
